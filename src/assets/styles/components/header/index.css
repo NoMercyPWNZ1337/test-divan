@@ -106,7 +106,7 @@
 }
 
 .header .links .link:hover {
-  text-shadow: 2px 3px 3px #fffbf2;
+  text-shadow: 2px 2px 2px #fffbf2;
   transition: all 0.2s ease;
 }
 
@@ -335,7 +335,7 @@
   width: 100%;
   background: #3d2808;
   border: 1px solid #fffbf2;
-  padding: 82px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
   z-index: 10;
   border-radius: 20px;
 }
@@ -389,6 +389,70 @@
 .header .search .search-form .search-link .link-title:hover{
  color: #3d2808;
  opacity: .5;
+}
+
+.phones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phones > svg {
+  width: 35px;
+  margin-right: 10px;
+}
+
+.phones:last-child > svg {
+  width: 40px;
+}
+
+.phones > p{
+  font-size: 16px;
+}
+
+.last-blocks{
+  display: flex;
+  margin-left: auto;
+}
+
+.phones:first-of-type{
+  margin-right: 20px;
+}
+
+
+#mobile-nav > .dropdown-chat:first-of-type + .link {
+  margin-top: 115px;
+}
+
+#mobile-nav > .dropdown-chat:first-of-type  {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#mobile-nav > .dropdown-chat:first-of-type .phones > svg{
+width: 40px;
+}
+
+#mobile-nav > .dropdown-chat:first-of-type .phones:nth-last-of-type(1) > svg{
+  width: 45px;
+}
+
+#mobile-nav > .dropdown-chat:first-of-type .phones > p{
+  font-size: 22px;
+}
+
+
+@media (max-width: 1222px) {
+  .header .phones > p{
+    font-size: 11px;
+  }
+  .header .phones > svg {
+    width: 30px;
+  }
+  
+  .header .phones:last-child > svg {
+    width: 35px;
+  }
 }
 
 @media (max-width: 1112px) {
@@ -487,7 +551,7 @@
 
   .header .search .search-trigger.active{
     position: absolute;
-    top: 100px;
+    top: 165px;
     width: 96%; /* Встановлюємо ширину на 90% */
     left: 50%; /* Зміщуємо лівий край на 50% від ширини батьківського елемента */
     transform: translateX(-50%);
@@ -519,6 +583,9 @@
 @media (max-width: 1024px) {
   .header .dropdown .dropdown-list {
     transform: translateX(-80%);
+  }
+  .header .search .search-form{
+    top: 20px;
   }
 }
 
@@ -556,5 +623,47 @@
   .header .search .search-form .search-btn,
   .header .search .search-form .search-input {
     padding: 15px;
+  }
+
+  .logo span {
+    font-size: 26px;
+  }
+  .logo img{
+    width: 60px;
+  }
+
+  #mobile-nav > .dropdown-chat:first-of-type .phones > svg{
+    width: 40px;
+    }
+    
+    #mobile-nav > .dropdown-chat:first-of-type .phones:nth-last-of-type(1) > svg{
+      width: 45px;
+    }
+    
+    #mobile-nav > .dropdown-chat:first-of-type .phones > p{
+      font-size: 22px;
+    }
+  
+    #mobile-nav > .dropdown-chat:first-of-type{
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .phones:first-of-type{
+      margin-right: 0;
+    }
+
+    .header .search .search-trigger.active{
+      top: 225px;
+    }
+
+}
+
+@media (max-width: 480px) {
+.header .search .search-form .search-link .link-price span, .header .search .search-form .search-link .link-price-discounted span{
+    font-size: 12px;
+  }
+  .header .search .search-form .search-link .link-title{
+    font-size: 13px;
   }
 }

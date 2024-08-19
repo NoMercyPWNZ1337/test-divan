@@ -1,7 +1,7 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 0 10px;
+  gap: 0 10px; 
 }
 
 .logo img {
@@ -27,3 +27,16 @@
   transition: all 0.2s ease;
 }
 
+@media (max-width: 360px){
+  .header .logo span{
+    font-size: 22px;
+  }
+
+  .header .burger-menu>img{
+    width: 25px;
+  }
+
+  .header .logo img{
+        width: 50px;
+  }
+}
